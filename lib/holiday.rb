@@ -99,8 +99,8 @@ def all_supplies_in_holidays(holiday_hash)
         else
           print ", #{supply.capitalize}"
         end
-        puts
       end
+      puts
     end
   end
 end
