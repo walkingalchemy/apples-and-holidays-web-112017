@@ -100,7 +100,7 @@ def all_supplies_in_holidays(holiday_hash)
           supply_string << ", #{supply}"
         end
       end
-      puts s_string
+      puts supply_string
     end
   end
 end
