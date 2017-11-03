@@ -61,18 +61,23 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
   # remember to return the updated hash
   holiday_hash.map do |seasons, holidays|
     if seasons == season
-      binding.pry
       holidays[holiday_name]= supply_array
-      binding.pry
     end
   end
   holiday_hash
 end
-add_new_holiday_with_supplies(holiday_hash, :spring, :easter, ["eggs", "bunnies"])
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
-
+  new_array = []
+  holiday_hash.each do |seasons, holidays|
+    if seasons = :winter
+      holidays.each do |holiday, supply_list|
+        supply_list.each {|supply| new_array << supply}
+      end
+    end
+  end
+  new_array
 end
 
 def all_supplies_in_holidays(holiday_hash)
