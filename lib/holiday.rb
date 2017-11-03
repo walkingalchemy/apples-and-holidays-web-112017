@@ -92,15 +92,15 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{seasons.to_s.capitalize}:"
     holidays.each do |holiday, supply_list|
       h_string = holiday.to_s.split("_").map {|word| word.capitalize}.join(" ")
-      print "   #{h_string}: "
+      s_string = "   #{h_string}: "
       supply_list.each_with_index do |supply, index|
         if index == 0
-          print "#{supply}"
+          s_string << "#{supply}"
         else
-          print ", #{supply}"
+          s_string << ", #{supply}"
         end
       end
-      puts
+      puts s_string
     end
   end
 end
