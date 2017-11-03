@@ -63,6 +63,7 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
     if seasons.to_s == season
       binding.pry
       holidays[holiday_name.to_sym]= supply_array
+      binding.pry
     end
   end
   holiday_hash
