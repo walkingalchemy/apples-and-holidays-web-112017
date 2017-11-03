@@ -95,9 +95,9 @@ def all_supplies_in_holidays(holiday_hash)
       print "   #{h_string}: "
       supply_list.each_with_index do |supply, index|
         if index == 0
-          print "#{supply.capitalize}"
+          print "#{supply.to_s.split("_").map {|word| word.capitalize}.join(" ")}"
         else
-          print ", #{supply.capitalize}"
+          print ", #{supply.to_s.split("_").map {|word| word.capitalize}.join(" ")}"
         end
       end
       puts
